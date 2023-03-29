@@ -47,14 +47,13 @@ public class LoginServlet extends HttpServlet {
 		
     	System.out.println(email);
     	System.out.println(password);
-
 		PrintWriter out = response.getWriter();
 		response.setContentType("text/html");
-		if(email!=null && email.equals("admin") && password!=null && password.equals("admin"))
-		{
+		
+		if(email!=null && email.equals("admin") && password!=null && password.equals("admin")){
 			HttpSession session = request.getSession();
 			session.setAttribute("id", email);
-			response.sendRedirect("admin");
+			response.sendRedirect("dashboard");
 			return;
 		}		
 	}
