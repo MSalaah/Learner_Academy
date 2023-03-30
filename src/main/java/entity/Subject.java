@@ -4,6 +4,8 @@ public class Subject {
 	
 	private String name;
 	
+	private int classId;
+
 	public Subject() {
 		// TODO Auto-generated constructor stub
 	}
@@ -22,9 +24,8 @@ public class Subject {
 	}
 
 	
-
 	@Override
 	public String toString() {
-		return "Customer [name=" + name + "]";
+		return "Subject [name=" + name + "]";
 	}
 }

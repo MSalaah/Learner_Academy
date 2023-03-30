@@ -119,32 +119,7 @@
 				</div>
 			</div>
 
-			<div class="report-container">
-				<div class="report-header">
-					<h1 class="recent-Articles" id='title'>Recent Articles</h1>
-				</div>
 
-				<div class="report-body">
-					<div class="report-topic-heading">
-						<h3 class="t-op">Name</h3>
-						<h3 class="t-op">Views</h3>
-						<h3 class="t-op">Comments</h3>
-						<h3 class="t-op">Status</h3>
-					</div>
-
-					<div class="items">
-
-						<c:forEach items="${teachers}" var="teacher">
-							<div class="item1">
-								<h3 class="t-op-nextlvl">${teacher.getName()}</h3>
-								<h3 class="t-op-nextlvl">2</h3>
-								<h3 class="t-op-nextlvl">210</h3>
-								<h3 class="t-op-nextlvl label-tag">Published</h3>
-							</div>
-						</c:forEach>
-					</div>
-				</div>
-			</div>
 		</div>
 	</div>
 

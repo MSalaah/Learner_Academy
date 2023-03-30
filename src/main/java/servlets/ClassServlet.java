@@ -51,7 +51,9 @@ public class ClassServlet extends HttpServlet {
 	}
 
 	private AcademyClass[] getClasses() {
-		AcademyClass[] classes = new AcademyClass[] { new AcademyClass("Class one"), new AcademyClass("Class two"),
+		AcademyClass[] classes = new AcademyClass[] {
+				new AcademyClass("Class one"), 
+				new AcademyClass("Class two"),
 				new AcademyClass("Class three") };
 
 		return classes;
