@@ -14,6 +14,11 @@
 <title>Academy Classes</title>
 <link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" type="text/css" href="responsive.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 
@@ -25,24 +30,83 @@
 				<div class="report-body">
 					<div class="report-topic-heading">
 						<h3 class="t-op">Name</h3>
-						<h3 class="t-op">Views</h3>
-						<h3 class="t-op">Comments</h3>
-						<h3 class="t-op">Status</h3>
+						<h3 class="t-op">Teacher</h3>
+						<h3 class="t-op">Subject</h3>
+						<h3 class="t-op">Assign Subject</h3>
 					</div>
 					   
 					<div class="items">
 					
 					<c:forEach items="${classes}" var="academyClass">
 		  			<div class="item1">
-					<h3 class="t-op-nextlvl">${academyClass.getName()}</h3>
-					<h3 class="t-op-nextlvl">2</h3>
-					<h3 class="t-op-nextlvl">210</h3>
-					<h3 class="t-op-nextlvl label-tag">Published</h3>
+					<h3 class="t-op-nextlvl">${academyClass.name}</h3>
+					<h3 class="t-op-nextlvl">${academyClass.getTeacher().getName()}</h3>
+					<h3 class="t-op-nextlvl">${academyClass.getSubject().getName()}</h3>
+					
+					<form method="post">   
+						 <input class="btn btn-default" type="submit" value="Assign">
+					</form>  
 					</div>
 					</c:forEach>
 					</div>
 				</div>
 			</div>
 			
+			<!-- Modal code goes here-->
+<div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Please Select Subject</h4>
+      </div>
+      <div class="modal-body">
+	  <div class="container">
+		<div class=row>
+		<img src="" class="img-thumbnail col-lg-2">
+	  </div>
+	  </div>
+	  					
+					<c:forEach items="${subjects}" var="subject">
+		  			<div class="item1">
+					<h3 class="t-op-nextlvl">${subject.name}</h3>
+					<h3 class="t-op-nextlvl"></h3>
+					<h3 class="t-op-nextlvl"></h3>
+					
+					<form method="post">   
+						 <input class="btn btn-default" type="submit" value="Assign">
+					</form>  
+					</div>
+					</c:forEach>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /.modal -->	
+  
+
+	<script type="text/javascript">
+	function inStrGrp(src,reg){
+		var regex=new RegExp("[" + reg + "]","i");
+		return regex.test(src);
+	}
+
+$(document).ready(function(){
+		$('input[type="submit"]').click(function (e) {
+				e.preventDefault();
+
+				$('#myModal').modal('show');
+
+		});
+	});
+	
+	</script>
+			
 </body>
+
 </html>

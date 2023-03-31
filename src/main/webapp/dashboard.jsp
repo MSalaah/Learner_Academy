@@ -96,6 +96,16 @@
 
 					</a> 
 					
+						<a href="student">
+						<div class="nav-option option4" >
+							<img
+								src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png"
+								class="nav-img" alt="institution">
+							<h3>Students</h3>
+						</div>
+
+					</a> 
+					
 					<a href="login">
 						<div class="nav-option logout">
 							<img

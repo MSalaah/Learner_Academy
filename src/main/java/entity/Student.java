@@ -3,14 +3,14 @@ package entity;
 public class Student {
 
 	private String name;
-	private String course;
+	private AcademyClass course;
 	private int age;
 
-	public String getCourse() {
+	public AcademyClass getCourse() {
 		return course;
 	}
 
-	public void setCourse(String course) {
+	public void setCourse(AcademyClass course) {
 		this.course = course;
 	}
 
@@ -26,7 +26,7 @@ public class Student {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Student(String name, String course, int age) {
+	public Student(String name, AcademyClass course, int age) {
 		super();
 		this.name = name;
 		this.course = course;

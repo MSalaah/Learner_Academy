@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-    <%@ page import="entity.Subject"%>
+    <%@ page import="entity.Student"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
@@ -19,25 +19,25 @@
 
 		<div class="report-container">
 				<div class="report-header">
-					<h1 class="recent-Articles" id='title'>Subjects</h1>
+					<h1 class="recent-Articles" id='title'>Students</h1>
 				</div>
 
 				<div class="report-body">
 					<div class="report-topic-heading">
 						<h3 class="t-op">Name</h3>
-						<h3 class="t-op">Class</h3>
-						<h3 class="t-op">Assigned</h3>
-						<h3 class="t-op">Assign to class</h3>
+						<h3 class="t-op">Views</h3>
+						<h3 class="t-op">Comments</h3>
+						<h3 class="t-op">Status</h3>
 					</div>
 					   
 					<div class="items">
 					
-					<c:forEach items="${subjects}" var="subject">
+					<c:forEach items="${students}" var="student">
 		  			<div class="item1">
-					<h3 class="t-op-nextlvl">${subject.getName()}</h3>
-					<h3 class="t-op-nextlvl"></h3>
-					<h3 class="t-op-nextlvl"></h3>
-					<button type="button">Assign</button>
+					<h3 class="t-op-nextlvl">${student.getName()}</h3>
+					<h3 class="t-op-nextlvl">2</h3>
+					<h3 class="t-op-nextlvl">210</h3>
+					<h3 class="t-op-nextlvl label-tag">Published</h3>
 					</div>
 					</c:forEach>
 					</div> 

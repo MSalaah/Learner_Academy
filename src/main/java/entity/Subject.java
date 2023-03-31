@@ -1,11 +1,12 @@
 package entity;
 
-public class Subject {
+import java.io.Serializable;
+
+public class Subject implements Serializable {
 	
+	private static final long serialVersionUID = -1520736715230378243L;
 	private String name;
 	
-	private int classId;
-
 	public Subject() {
 		// TODO Auto-generated constructor stub
 	}

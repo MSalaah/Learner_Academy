@@ -1,9 +1,11 @@
 package entity;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class AcademyClass {
+public class AcademyClass implements Serializable {
 
+	private static final long serialVersionUID = -6143431480653781556L;
 	private int id;
 	private String name;
 	private Subject subject;
@@ -19,6 +21,13 @@ public class AcademyClass {
 		this.name = name;
 	}
 	
+	public AcademyClass(String name, Subject subject, Teacher teacher) {
+		super();
+		this.name = name;
+		this.subject = subject; 
+		this.teacher = teacher;
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -30,7 +39,7 @@ public class AcademyClass {
 	public Subject getSubject() {
 		return subject;
 	}
-
+	
 	public void setSubject(Subject subject) {
 		this.subject = subject;
 	}
